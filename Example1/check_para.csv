@@ -1,0 +1,9 @@
+WeightFare,0.2
+WeightTravel,0.2
+WeightWait,0.2
+WeightTransfer,0.2
+WeightWalk,0.2
+ValueOfTravel,1
+ValueOfTransfer,1
+ValueOfWait,1
+ValueOfWalk,1
