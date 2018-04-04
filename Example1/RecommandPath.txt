@@ -1,4 +1,6 @@
 Pas=A,shortest_non_weight=(1,0,3,2,4,)
 Pas=B,shortest_non_weight=(5,6,7,)
-Pas=A,shortest_weight=(10324)
-Pas=B,shortest_weight=(567)
+Pas=A,shortest_weight=(1,0,3,2,4,)
+Pas=B,shortest_weight=(5,6,7,)
+Pas=A, ordered_path=(0,2,3,1,)
+Pas=B, ordered_path=(5,6,7,)

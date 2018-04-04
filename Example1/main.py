@@ -22,9 +22,11 @@ if __name__ == "__main__":
 
     passengers = set_pas(paths)
     for o in passengers:
+        print("*********start to compare Passengers {0} ************".format(o.id))
         o.shortest_weight = rankpath.shortest(o.paths, 'Weight')
         o.shortest_non_weight = rankpath.shortest(o.paths, 'NonWeight')
-
+        # use absolute jnd_value
+        o.ordered_path = rankpath.compare_oder(o.paths, o.order, o.jnd_abs)
     # print suggested path
     with open("RecommandPath.txt", "wt") as f:
         for o in passengers:
@@ -35,7 +37,12 @@ if __name__ == "__main__":
         for o in passengers:
             print("Pas={0},shortest_weight=(".format(o.id), file=f, end='')
             for p in o.shortest_weight:
-                print('{0}'.format(p.id), file=f, end='')
+                print('{0},'.format(p.id), file=f, end='')
+            print(')', file=f)
+        for o in passengers:
+            print("Pas={0}, ordered_path=(".format(o.id), file=f, end='')
+            for p in o.ordered_path:
+                print('{0},'.format(p.id), file=f, end='')
             print(')', file=f)
 
     print("Complete")

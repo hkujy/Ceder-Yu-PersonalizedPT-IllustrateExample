@@ -49,7 +49,7 @@ class PathClass:
                     'Walk': _walk,
                     'Transfer': _transfer}
         self.cost ={'Weight': -1, 'NonWeight': -1}
-
+        self.status = False   # Whether the path has been checked in the ordering method
     def get_weighted_cost(self, _para: ParaClass):
         """
             get the weighted cost associated with a path
@@ -82,7 +82,13 @@ class PasClass:
                     'Wait': -1,
                     'Walk': -1,
                     'Transfer': -1}
+        self.jnd_abs = {'Fare': -1,
+                        'Travel': -1,
+                        'Wait': -1,
+                        'Walk': -1,
+                        'Transfer': -1}
         self.shortest_weight = []
         self.shortest_non_weight = []
         self.order = []
+        self.ordered_path = []
     pass

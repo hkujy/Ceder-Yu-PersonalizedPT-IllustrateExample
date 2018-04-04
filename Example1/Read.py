@@ -9,7 +9,7 @@ def set_pas(_paths: PathClass):
     :return:
     """
     pas = [PasClass('A'), PasClass('B')]
-    data = pd.read_csv('Jnd.csv', index_col=0)
+    data = pd.read_csv('Jnd_percentage.csv', index_col=0)
     pas[0].jnd = {'Fare': data['A']['Fare'],
                   'Travel': data['A']['Travel'],
                   'Wait': data['A']['Wait'],
@@ -20,6 +20,21 @@ def set_pas(_paths: PathClass):
                   'Wait': data['B']['Wait'],
                   'Transfer': data['B']['Transfer'],
                   'Walk': data['B']['Walk']}
+
+    data = pd.read_csv('Jnd_abs.csv', index_col=0)
+    pas[0].jnd_abs = {'Fare': data['A']['Fare'],
+                      'Travel': data['A']['Travel'],
+                      'Wait': data['A']['Wait'],
+                      'Transfer': data['A']['Transfer'],
+                      'Walk': data['A']['Walk']}
+    pas[1].jnd_abs = {'Fare': data['B']['Fare'],
+                      'Travel': data['B']['Travel'],
+                      'Wait': data['B']['Wait'],
+                      'Transfer': data['B']['Transfer'],
+                      'Walk': data['B']['Walk']}
+
+
+
     pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
     pas[1].paths = [_paths[5], _paths[6], _paths[7]]
     data = pd.read_csv('Order.csv')
