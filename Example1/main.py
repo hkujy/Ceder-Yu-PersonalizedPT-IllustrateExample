@@ -5,25 +5,6 @@ import pandas as pd
 import rankpath
 
 
-def read_para():
-    """
-        function to read para class data
-    """
-
-    data = pd.read_csv('Para.csv', header=None, index_col=0)
-    _vot = data[1]['ValueOfTravel']
-    _votr = data[1]['ValueOfTransfer']
-    _vowait = data[1]['ValueOfWait']
-    _vowalk = data[1]['ValueOfWalk']
-    _w_fare = data[1]['WeightFare']
-    _w_travel = data[1]['WeightTravel']
-    _w_wait = data[1]['WeightWait']
-    _w_transfer = data[1]['WeightTransfer']
-    _w_walk = data[1]['WeightWalk']
-
-    return ParaClass(_vot, _votr, _vowait, _vowalk, _w_fare, _w_travel, _w_wait, _w_transfer, _w_walk)
-
-
 class ParaClass:
     """
         class for the parameters
@@ -66,13 +47,13 @@ class PathClass:
 
     def __init__(self, _id, _travel, _fare, _wait, _transfer, _walk):
         self.id = _id
-        self.travel = _travel
-        self.fare = _fare
-        self.wait = _wait
-        self.transfer = _transfer
-        self.walk = _walk
-        self.cost_weighted = -1
-        self.cost_non_weighted = -1  # use to rank the shortest path
+        # att : stands for attributes
+        self.att = {'Travel': _travel,
+                    'Fare': _fare,
+                    'Wait': _wait,
+                    'Walk': _walk,
+                    'Transfer': _transfer}
+        self.cost ={'Weight': -1, 'NonWeight': -1}
 
     def get_weighted_cost(self, _para: ParaClass):
         """
@@ -80,17 +61,17 @@ class PathClass:
         :param _para:
         :return:
         """
-        self.cost_weighted = self.fare * _para.weight['Fare'] \
-                             + self.travel * _para.value['Travel'] * _para.weight['Travel'] \
-                             + self.wait * _para.value['Wait'] * _para.weight['Wait'] \
-                             + self.transfer * _para.value['Transfer'] * _para.weight['Transfer'] \
-                             + self.walk * _para.value['Walk'] * _para.weight['Walk']
+        self.cost['Weight'] = self.att['Fare']* _para.weight['Fare'] \
+                             + self.att['Travel'] * _para.value['Travel'] * _para.weight['Travel'] \
+                             + self.att['Wait'] * _para.value['Wait'] * _para.weight['Wait'] \
+                             + self.att['Transfer'] * _para.value['Transfer'] * _para.weight['Transfer'] \
+                             + self.att['Walk'] * _para.value['Walk'] * _para.weight['Walk']
 
-        self.cost_non_weighted = self.fare \
-                                 + self.travel * _para.value['Travel'] \
-                                 + self.wait * _para.value['Wait'] \
-                                 + self.transfer * _para.value['Transfer'] \
-                                 + self.walk * _para.value['Walk']
+        self.cost['NonWeight'] = self.att['Fare'] \
+                                 + self.att['Travel'] * _para.value['Travel'] \
+                                 + self.att['Wait'] * _para.value['Wait'] \
+                                 + self.att['Transfer'] * _para.value['Transfer'] \
+                                 + self.att['Walk'] * _para.value['Walk']
 
 
 class PasClass:
@@ -108,7 +89,7 @@ class PasClass:
                     'Transfer': -1}
         self.shortest_weight = []
         self.shortest_non_weight = []
-
+        self.order = []
     pass
 
 
@@ -131,6 +112,13 @@ def set_pas(_paths: PathClass):
                   'Walk': data['B']['Walk']}
     pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
     pas[1].paths = [_paths[5], _paths[6], _paths[7]]
+    data = pd.read_csv('Order.csv')
+    num_data_row = data.shape[0]
+    for i in range(0, num_data_row):
+        pas[0].order.append(data['A'][i])
+        pas[1].order.append(data['B'][i])
+
+
     return pas
 
 
@@ -155,6 +143,25 @@ def read_path():
     return path
 
 
+def read_para():
+    """
+        function to read para class data
+    """
+
+    data = pd.read_csv('Para.csv', header=None, index_col=0)
+    _vot = data[1]['ValueOfTravel']
+    _votr = data[1]['ValueOfTransfer']
+    _vowait = data[1]['ValueOfWait']
+    _vowalk = data[1]['ValueOfWalk']
+    _w_fare = data[1]['WeightFare']
+    _w_travel = data[1]['WeightTravel']
+    _w_wait = data[1]['WeightWait']
+    _w_transfer = data[1]['WeightTransfer']
+    _w_walk = data[1]['WeightWalk']
+
+    return ParaClass(_vot, _votr, _vowait, _vowalk, _w_fare, _w_travel, _w_wait, _w_transfer, _w_walk)
+
+
 if __name__ == "__main__":
     """
          main program 
@@ -167,13 +174,14 @@ if __name__ == "__main__":
     with open("check_path.csv", "wt") as f:
         print("id,fare,travel,wait,transfer,walk,weight_cost,non_weight_cost", file=f)
         for p in paths:
-            print("{0},{1},{2},{3},{4},{5},{6},{7}".format(p.id, p.fare, p.travel, p.wait, p.transfer, p.walk,
-                                                           p.cost_weighted, p.cost_non_weighted), file=f)
+            print("{0},{1},{2},{3},{4},{5},{6},{7}".format(p.id, p.att['Fare'], p.att['Travel'], p.att['Wait'],
+                                                           p.att['Transfer'], p.att['Walk'],
+                                                           p.cost['Weight'], p.cost['NonWeight']), file=f)
 
     passengers = set_pas(paths)
     for o in passengers:
-        o.shortest_weight = rankpath.shortest(o.paths, rank_weighted=True)
-        o.shortest_non_weight = rankpath.shortest(o.paths, rank_weighted=False)
+        o.shortest_weight = rankpath.shortest(o.paths, 'Weight')
+        o.shortest_non_weight = rankpath.shortest(o.paths, 'NonWeight')
 
     # print suggested path
     with open("RecommandPath.txt", "wt") as f:

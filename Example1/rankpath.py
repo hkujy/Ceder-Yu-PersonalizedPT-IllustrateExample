@@ -3,14 +3,11 @@
 """
 
 
-def shortest(_paths, rank_weighted: bool):
+def shortest(_paths, type:str):
     # print("Before Sort")
     # for p in _paths:
     #     print(p.id)
-    if rank_weighted:
-        sort_path = sorted(_paths, key=lambda _paths: _paths.cost_weighted)
-    else:
-        sort_path = sorted(_paths, key=lambda _paths: _paths.cost_non_weighted)
+    sort_path = sorted(_paths, key=lambda _paths: _paths.cost[type])
     # print("After Sort")
     # for p in sort_path:
     #     print(p.id)
@@ -21,3 +18,12 @@ def shortest(_paths, rank_weighted: bool):
     pass
 
 
+def compare_oder(_paths):
+    """
+        find path order based on the proposed method
+    :param _paths:
+    :return:
+    """
+    # Step 1: cmpar
+
+    pass
