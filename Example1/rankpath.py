@@ -18,12 +18,15 @@ def shortest(_paths, type:str):
     pass
 
 
-def compare_oder(_paths):
+def compare_oder(_paths, _order, _jnd):
     """
         find path order based on the proposed method
     :param _paths:
     :return:
     """
-    # Step 1: cmpar
+    # step 1: compare JND value with the minimum cost : return candidate path set
+    # step 2: given candidate path set, use lex order method to compare
+
+
 
     pass
