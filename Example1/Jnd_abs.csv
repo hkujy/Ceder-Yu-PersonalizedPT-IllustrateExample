@@ -1,6 +1,6 @@
 ﻿,A,B
 Fare,5,5
-Travel,10,10
-Wait,5,5
-Transfer,0,1
-Walk,5,5
+Travel,60,60
+Wait,20,20
+Transfer,1,1
+Walk,100,100
