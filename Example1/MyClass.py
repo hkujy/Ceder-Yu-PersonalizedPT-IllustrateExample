@@ -4,18 +4,17 @@ class ParaClass:
     """
         class for the parameters
     """
+    def __init__(self):
+        self.value = {'Travel': -999,
+                      'Transfer': -999,
+                      'Wait': -999,
+                      'Walk': -999}
+        self.weight = {'Fare': -999,
+                       'Travel': -999,
+                       'Wait': -999,
+                       'Transfer': -999,
+                       'Walk': -999}
 
-    def __init__(self, _vot, _votr, _vowait, _vowalk, _w_fare, _w_travel, _w_wait, _w_transfer, _w_walk):
-        self.value = {'Travel': _vot,
-                      'Transfer': _votr,
-                      'Wait': _vowait,
-                      'Walk': _vowalk}
-        self.weight = {'Fare': _w_fare,
-                       'Travel': _w_travel,
-                       'Wait': _w_wait,
-                       'Transfer': _w_transfer,
-                       'Walk': _w_walk}
-        self.normalize_weight()
 
     def normalize_weight(self):
         """
@@ -28,12 +27,6 @@ class ParaClass:
         if sum_value > 1:
             for key in self.weight:
                 self.weight[key] = self.weight[key] / sum_value
-        with open("check_para.csv", "wt") as f:
-            for key in self.weight:
-                print('{0},{1}'.format("Weight" + key, self.weight[key]), file=f)
-            for key in self.value:
-                print('{0},{1}'.format("ValueOf" + key, self.value[key]), file=f)
-
 
 class PathClass:
     """
@@ -50,7 +43,9 @@ class PathClass:
                     'Transfer': _transfer}
         self.cost ={'Weight': -1, 'NonWeight': -1}
         self.status = False   # Whether the path has been checked in the ordering method
-    def get_weighted_cost(self, _para: ParaClass):
+        self.isCandy = True   # Whether the paths is a candidate path
+
+    def get_cost(self, _para: ParaClass):
         """
             get the weighted cost associated with a path
         :param _para:
@@ -89,6 +84,25 @@ class PasClass:
                         'Transfer': -1}
         self.shortest_weight = []
         self.shortest_non_weight = []
-        self.order = []
+        self.order = ['Fare', 'Travel', 'Wait', 'Transfer', 'Walk']
         self.ordered_path = []
+        self.para = ParaClass()
+
+    def update_path_cost(self):
+        """
+            update path cost based on the input weighing parameters
+        :return:
+        """
+        for i in range(0, len(self.paths)):
+            self.paths[i].get_cost(self.paths[i],self.para)
+        # for p in self.paths:
+        #     p.get_cost(self.para)
+
+    def update_oder(self):
+        """
+            update order list based on the weighting parameter
+        :return:
+        """
+        self.order = sorted(self.order, reverse=True, key=lambda item: self.para.weight[item])
+
     pass
