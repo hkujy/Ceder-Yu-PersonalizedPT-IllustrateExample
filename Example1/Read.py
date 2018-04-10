@@ -1,16 +1,50 @@
 
 import pandas as pd
 from MyClass import PathClass, PasClass, ParaClass
+import numpy
 
+def get_path_cost(p, _para: ParaClass):
+    """
+        get the weighted cost associated with a path
+    :param _para:
+    :return:
+    """
+    p.cost['Weight'] = p.att['Fare'] * _para.weight['Fare'] \
+                          + p.att['Travel'] * _para.value['Travel'] * _para.weight['Travel'] \
+                          + p.att['Wait'] * _para.value['Wait'] * _para.weight['Wait'] \
+                          + p.att['Transfer'] * _para.value['Transfer'] * _para.weight['Transfer'] \
+                          + p.att['Walk'] * _para.value['Walk'] * _para.weight['Walk']
 
-def read_pas(_paths: PathClass, default_para:ParaClass):
+    p.cost['NonWeight'] = p.att['Fare'] \
+                             + p.att['Travel'] * _para.value['Travel'] \
+                             + p.att['Wait'] * _para.value['Wait'] \
+                             + p.att['Transfer'] * _para.value['Transfer'] \
+                             + p.att['Walk'] * _para.value['Walk']
+
+def read_pas(_paths, default_para:ParaClass):
     """
         set the two passengers
     :return:
     """
     pas = [PasClass('A'), PasClass('B')]
-    pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
-    pas[1].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
+    # pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
+    # list = _paths.copy()
+    # self.att = {'Travel': _travel,
+    #             'Fare': _fare,
+    #             'Wait': _wait,
+    #             'Walk': _walk,
+    #             'Transfer': _transfer}
+    for i in range(0, 4):
+        # def __init__(self, _id, _travel, _fare, _wait, _transfer, _walk):
+        pas[0].paths.append(PathClass(_paths[i].id,_paths[i].att['Travel'], _paths[i].att['Fare'], _paths[i].att['Wait'], _paths[i].att['Transfer'],_paths[i].att['Walk']))
+        pas[1].paths.append(PathClass(_paths[i].id,_paths[i].att['Travel'], _paths[i].att['Fare'], _paths[i].att['Wait'], _paths[i].att['Transfer'],_paths[i].att['Walk']))
+        # pas[1].paths.append(ParaClass(_paths[i].id,_paths[i].travel, _paths[i].fare, _paths[i].wait, _paths[i].transfer,_paths[i].walk))
+    # pas[1].paths = list(_paths)
+    # pas[0].paths = list(_paths)
+        # pas[1].paths.append(_paths[i])
+    # pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3]]
+    # pas[1].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
+    # pas[1].paths = [_paths[0], _paths[1], _paths[2], _paths[3]]
     # pas[1].paths = [_paths[5], _paths[6], _paths[7]]
     # data = pd.read_csv('Order.csv')
     # num_data_row = data.shape[0]
@@ -21,7 +55,7 @@ def read_pas(_paths: PathClass, default_para:ParaClass):
     data_weight = pd.read_csv('Pas_weight.csv', index_col=0)
     data_jnd_per = pd.read_csv('Jnd_percentage.csv', index_col=0)
     data_jnd_abs = pd.read_csv('Jnd_abs.csv', index_col=0)
-    for i in range (0, 2):
+    for i in range(0, 2):
         if i == 0:
             name = 'A'
         if i == 1:
@@ -48,7 +82,11 @@ def read_pas(_paths: PathClass, default_para:ParaClass):
                               'Transfer': _w_transfer,
                               'Walk': _w_walk}
         pas[i].para.normalize_weight()
-        pas[i].update_path_cost()
+        for p in pas[i].paths:
+            get_path_cost(p, pas[i].para)
+
+            # p.get_cost(pas[i].para)
+        # pas[i].update_path_cost()
         pas[i].update_oder()
 
     return pas

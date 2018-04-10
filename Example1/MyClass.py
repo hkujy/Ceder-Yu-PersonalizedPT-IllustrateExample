@@ -94,8 +94,10 @@ class PasClass:
             update path cost based on the input weighing parameters
         :return:
         """
-        for p in self.paths:
-            p.get_cost(self.para)
+        for i in range(0, len(self.paths)):
+            self.paths[i].get_cost(self.paths[i],self.para)
+        # for p in self.paths:
+        #     p.get_cost(self.para)
 
     def update_oder(self):
         """

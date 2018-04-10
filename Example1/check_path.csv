@@ -1,0 +1,5 @@
+id,fare,travel,wait,transfer,walk,weight_cost,non_weight_cost
+1,10,35,15,1,0
+2,4,45,10,0,0
+3,8,40,20,1,0
+4,8,35,20,1,0

@@ -12,7 +12,7 @@ def shortest(_paths, type: str):
     # print("After Sort")
     # for p in sort_path:
     #     print(p.id)
-    print("Complete shortest path ranking")
+    # print("Complete shortest path ranking")
 
     return sort_path
 
@@ -33,7 +33,7 @@ def get_candidate_path(_paths, _jnd):
                   'Transfer': 10000}
     for key in min_vector:
         min_vector[key] = min(_paths, key=lambda _paths: _paths.att[key])
-        print("Key = {0}, MinValue = {1}", key, min_vector[key].att[key])
+        # print("Key = {0}, MinValue = {1}", key, min_vector[key].att[key])
 
     # step 2: compare the cost attributes with the minimum one
     candidate_paths = []
@@ -67,7 +67,6 @@ def lex_order(_paths, _order):
         p.status = False
     count = 0
     for key in _order:
-        print(key)
         if count >= len(_paths):
             continue
         ranked.append(min([l for l in _paths if l.status is False], key=lambda _paths: _paths.att[key]))

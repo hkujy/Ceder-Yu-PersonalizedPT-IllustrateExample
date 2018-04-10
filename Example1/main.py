@@ -3,6 +3,7 @@
 """
 import rankpath
 from Read import read_para, read_path, read_pas
+import MyOutPut
 
 if __name__ == "__main__":
     """
@@ -25,36 +26,10 @@ if __name__ == "__main__":
         # use absolute jnd_value
         o.ordered_path = rankpath.compare_oder(o.paths, o.order, o.jnd_abs)
     # print suggested path
-    with open("RecommandPath.txt", "wt") as f:
-        for o in passengers:
-            print("Pas={0},shortest_non_weight=(".format(o.id), file=f, end='')
-            for p in o.shortest_non_weight:
-                print('{0},'.format(p.id), file=f, end='')
-            print(')', file=f)
-        for o in passengers:
-            print("Pas={0},shortest_weight=(".format(o.id), file=f, end='')
-            for p in o.shortest_weight:
-                print('{0},'.format(p.id), file=f, end='')
-            print(')', file=f)
-        for o in passengers:
-            print("Pas={0}, ordered_path=(".format(o.id), file=f, end='')
-            for p in o.ordered_path:
-                print('{0},'.format(p.id), file=f, end='')
-            print(')', file=f)
-    with open("check_para.csv", "wt") as f:
-        print("Weight,A,B", file=f)
-        keys = passengers[0].para.weight.keys()
-        for r in keys:
-            print("{0},{1},{2}".format(r, passengers[0].para.weight[r], passengers[1].para.weight[r]), file=f)
 
-    with open("result_paths.csv", "wt") as f:
-        print("Rank,A,B,non_weight,weight", file=f)
-        nump = len(passengers[0].ordered_path)
-        for p in range(0, nump):
-            print("{0},{1},{2},{3},{4}".
-                  format(p, passengers[0].ordered_path[p].id, passengers[1].ordered_path[p].id,
-                         passengers[0].ordered_path[p].cost['NonWeight'],
-                         passengers[1].ordered_path[p].cost['Weight']), file=f)
+    MyOutPut.pas(passengers)
+    MyOutPut.recommend_path(passengers)
+    MyOutPut.check_para(passengers)
 
 
     print("Complete")
