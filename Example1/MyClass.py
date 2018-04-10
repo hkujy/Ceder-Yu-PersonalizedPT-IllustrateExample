@@ -28,8 +28,6 @@ class ParaClass:
             for key in self.weight:
                 self.weight[key] = self.weight[key] / sum_value
 
-
-
 class PathClass:
     """
         define class for path
@@ -45,6 +43,7 @@ class PathClass:
                     'Transfer': _transfer}
         self.cost ={'Weight': -1, 'NonWeight': -1}
         self.status = False   # Whether the path has been checked in the ordering method
+        self.isCandy = True   # Whether the paths is a candidate path
 
     def get_cost(self, _para: ParaClass):
         """

@@ -21,10 +21,10 @@ if __name__ == "__main__":
     passengers = read_pas(paths, default_para)
     for o in passengers:
         print("*********start to compare Passengers {0} ************".format(o.id))
-        o.shortest_weight = rankpath.shortest(o.paths, 'Weight')
-        o.shortest_non_weight = rankpath.shortest(o.paths, 'NonWeight')
+        o.shortest_weight = rankpath.sort_path(o.paths, 'Weight')
+        o.shortest_non_weight = rankpath.sort_path(o.paths, 'NonWeight')
         # use absolute jnd_value
-        o.ordered_path = rankpath.compare_oder(o.paths, o.order, o.jnd_abs)
+        o.ordered_path = rankpath.compare_oder(o.paths, o.order, o.jnd_abs, o.jnd)
     # print suggested path
 
     MyOutPut.pas(passengers)

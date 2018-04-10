@@ -3,23 +3,20 @@ import pandas as pd
 from MyClass import PathClass, PasClass, ParaClass
 import numpy
 
+
 def get_path_cost(p, _para: ParaClass):
+
     """
         get the weighted cost associated with a path
     :param _para:
     :return:
     """
     p.cost['Weight'] = p.att['Fare'] * _para.weight['Fare'] \
-                          + p.att['Travel'] * _para.value['Travel'] * _para.weight['Travel'] \
-                          + p.att['Wait'] * _para.value['Wait'] * _para.weight['Wait'] \
-                          + p.att['Transfer'] * _para.value['Transfer'] * _para.weight['Transfer'] \
-                          + p.att['Walk'] * _para.value['Walk'] * _para.weight['Walk']
+                       + p.att['Travel'] * _para.value['Travel'] * _para.weight['Travel'] \
+                       + p.att['Wait'] * _para.value['Wait'] * _para.weight['Wait']
 
-    p.cost['NonWeight'] = p.att['Fare'] \
-                             + p.att['Travel'] * _para.value['Travel'] \
-                             + p.att['Wait'] * _para.value['Wait'] \
-                             + p.att['Transfer'] * _para.value['Transfer'] \
-                             + p.att['Walk'] * _para.value['Walk']
+    p.cost['NonWeight'] = p.att['Travel'] * _para.value['Travel'] + p.att['Wait'] * _para.value['Wait']
+
 
 def read_pas(_paths, default_para:ParaClass):
     """
