@@ -62,7 +62,8 @@ def lex_order(_paths, _order, _jnd):
         p.status = False
     count = 0
 
-    min_vector = {'Travel': 100000, 'Fare': 100000, 'Wait': 10000}
+    min_vector = {'Travel': 100000, 'Fare': 100000, 'Wait': 10000,
+                  'Walk': 10000, 'Transfer': 10000}
     for key in min_vector:
         min_vector[key] = min(_paths, key=lambda _paths: _paths.att[key])
 

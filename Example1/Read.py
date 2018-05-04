@@ -13,7 +13,10 @@ def get_path_cost(p, _para: ParaClass):
     """
     p.cost['Weight'] = p.att['Fare'] * _para.weight['Fare'] \
                        + p.att['Travel'] * _para.value['Travel'] * _para.weight['Travel'] \
-                       + p.att['Wait'] * _para.value['Wait'] * _para.weight['Wait']
+                       + p.att['Wait'] * _para.value['Wait'] * _para.weight['Wait'] \
+                       + p.att['Walk'] * _para.value['Walk']*_para.weight['Walk']
+
+
 
     p.cost['NonWeight'] = p.att['Travel'] * _para.value['Travel'] + p.att['Wait'] * _para.value['Wait']
 
@@ -49,9 +52,12 @@ def read_pas(_paths, default_para:ParaClass):
     #     pas[0].order.append(data['A'][i])
     #     pas[1].order.append(data['B'][i])
 
-    data_weight = pd.read_csv('Pas_weight.csv', index_col=0)
-    data_jnd_per = pd.read_csv('Jnd_percentage.csv', index_col=0)
-    data_jnd_abs = pd.read_csv('Jnd_abs.csv', index_col=0)
+    # data_weight = pd.read_csv('Pas_weight.csv', index_col=0)
+    data_weight = pd.read_excel('Data.xlsx', 'PasWeight', index_col=0)
+    # data_jnd_per = pd.read_csv('Jnd_percentage.csv', index_col=0)
+    data_jnd_per = pd.read_excel('Data.xlsx', 'JndPer', index_col=0)
+    # data_jnd_abs = pd.read_csv('Jnd_abs.csv', index_col=0)
+    data_jnd_abs = pd.read_excel('Data.xlsx', 'JndAbs', index_col=0)
     for i in range(0, 2):
         if i == 0:
             name = 'A'
@@ -94,7 +100,9 @@ def read_path():
         read path cost
     :return:
     """
-    data = pd.read_csv('PathCost.csv')
+    # data = pd.read_csv('PathCost.csv')
+    data = pd.read_excel('Data.xlsx', 'PathCost')
+
     num_data_row = data.shape[0]
     path = []
     _id = 0
@@ -115,16 +123,20 @@ def read_para():
         function to read para class data
     """
 
-    data = pd.read_csv('Para.csv', header=None, index_col=0)
-    _vot = data[1]['ValueOfTravel']
-    _votr = data[1]['ValueOfTransfer']
-    _vowait = data[1]['ValueOfWait']
-    _vowalk = data[1]['ValueOfWalk']
-    _w_fare = data[1]['WeightFare']
-    _w_travel = data[1]['WeightTravel']
-    _w_wait = data[1]['WeightWait']
-    _w_transfer = data[1]['WeightTransfer']
-    _w_walk = data[1]['WeightWalk']
+    # data = pd.read_csv('Para.csv', header=None, index_col=0)
+    data = pd.read_excel('Data.xlsx', 'Para')
+
+    # _vot = data[1]['ValueOfTravel']
+    _vot = data['Value'][0]
+    _vowait = data['Value'][1]
+    _votr = data['Value'][2]
+    _vowalk = data['Value'][3]
+    _w_fare = data['Value'][4]
+    _w_travel = data['Value'][5]
+    _w_transfer = data['Value'][6]
+    _w_wait = data['Value'][7]
+    _w_walk = data['Value'][8]
+
     para = ParaClass()
     para.value = {'Travel': _vot,
                   'Transfer': _votr,
