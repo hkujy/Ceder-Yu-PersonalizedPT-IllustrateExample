@@ -1,20 +1,10 @@
-
-
 class ParaClass:
     """
         class for the parameters
     """
     def __init__(self):
-        self.value = {'Travel': -999,
-                      'Transfer': -999,
-                      'Wait': -999,
-                      'Walk': -999}
-        self.weight = {'Fare': -999,
-                       'Travel': -999,
-                       'Wait': -999,
-                       'Transfer': -999,
-                       'Walk': -999}
-
+        self.value = {'Travel': -999, 'Transfer': -999, 'Wait': -999, 'Walk': -999,'Transfer': -999, }
+        self.weight = {'Fare': -999, 'Travel': -999, 'Wait': -999, 'Transfer': -999, 'Walk': -999}
 
     def normalize_weight(self):
         """
@@ -28,6 +18,7 @@ class ParaClass:
             for key in self.weight:
                 self.weight[key] = self.weight[key] / sum_value
 
+
 class PathClass:
     """
         define class for path
@@ -36,11 +27,7 @@ class PathClass:
     def __init__(self, _id, _travel, _fare, _wait, _transfer, _walk):
         self.id = _id
         # att : stands for attributes
-        self.att = {'Travel': _travel,
-                    'Fare': _fare,
-                    'Wait': _wait,
-                    'Walk': _walk,
-                    'Transfer': _transfer}
+        self.att = {'Travel': _travel, 'Fare': _fare, 'Wait': _wait, 'Walk': _walk, 'Transfer': _transfer}
         self.cost ={'Weight': -1, 'NonWeight': -1}
         self.status = False   # Whether the path has been checked in the ordering method
         self.isCandy = True   # Whether the paths is a candidate path
@@ -72,16 +59,8 @@ class PasClass:
     def __init__(self, _id):
         self.id = _id
         self.paths = []
-        self.jnd = {'Fare': -1,
-                    'Travel': -1,
-                    'Wait': -1,
-                    'Walk': -1,
-                    'Transfer': -1}
-        self.jnd_abs = {'Fare': -1,
-                        'Travel': -1,
-                        'Wait': -1,
-                        'Walk': -1,
-                        'Transfer': -1}
+        self.jnd = {'Fare': -1, 'Travel': -1, 'Wait': -1, 'Walk': -1, 'Transfer': -1}
+        self.jnd_abs = {'Fare': -1, 'Travel': -1, 'Wait': -1, 'Walk': -1, 'Transfer': -1}
         self.shortest_weight = []
         self.shortest_non_weight = []
         self.order = ['Fare', 'Travel', 'Wait', 'Transfer', 'Walk']

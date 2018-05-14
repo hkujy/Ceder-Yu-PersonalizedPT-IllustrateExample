@@ -23,7 +23,7 @@ def get_candidate_path(_paths, _jnd):
     :return:
     """
     # step 1: obtain the minimum value for each cost attributes
-    min_vector = {'Travel': 100000, 'Fare': 100000, 'Wait': 10000, 'Transfer': 10000}
+    min_vector = {'Travel': 100000, 'Fare': 100000, 'Wait': 10000, 'Transfer': 10000, 'Walk':10000}
     for key in min_vector:
         min_vector[key] = min(_paths, key=lambda _paths: _paths.att[key])
     with open("check_min.csv","wt") as f:

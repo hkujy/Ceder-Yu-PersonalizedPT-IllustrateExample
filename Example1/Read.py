@@ -1,11 +1,9 @@
 
 import pandas as pd
 from MyClass import PathClass, PasClass, ParaClass
-import numpy
 
 
 def get_path_cost(p, _para: ParaClass):
-
     """
         get the weighted cost associated with a path
     :param _para:
@@ -16,8 +14,6 @@ def get_path_cost(p, _para: ParaClass):
                        + p.att['Wait'] * _para.value['Wait'] * _para.weight['Wait'] \
                        + p.att['Walk'] * _para.value['Walk']*_para.weight['Walk']
 
-
-
     p.cost['NonWeight'] = p.att['Travel'] * _para.value['Travel'] + p.att['Wait'] * _para.value['Wait']
 
 
@@ -27,30 +23,10 @@ def read_pas(_paths, default_para:ParaClass):
     :return:
     """
     pas = [PasClass('A'), PasClass('B')]
-    # pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
-    # list = _paths.copy()
-    # self.att = {'Travel': _travel,
-    #             'Fare': _fare,
-    #             'Wait': _wait,
-    #             'Walk': _walk,
-    #             'Transfer': _transfer}
+    # each passenger has all 4 path as options
     for i in range(0, 4):
-        # def __init__(self, _id, _travel, _fare, _wait, _transfer, _walk):
         pas[0].paths.append(PathClass(_paths[i].id,_paths[i].att['Travel'], _paths[i].att['Fare'], _paths[i].att['Wait'], _paths[i].att['Transfer'],_paths[i].att['Walk']))
         pas[1].paths.append(PathClass(_paths[i].id,_paths[i].att['Travel'], _paths[i].att['Fare'], _paths[i].att['Wait'], _paths[i].att['Transfer'],_paths[i].att['Walk']))
-        # pas[1].paths.append(ParaClass(_paths[i].id,_paths[i].travel, _paths[i].fare, _paths[i].wait, _paths[i].transfer,_paths[i].walk))
-    # pas[1].paths = list(_paths)
-    # pas[0].paths = list(_paths)
-        # pas[1].paths.append(_paths[i])
-    # pas[0].paths = [_paths[0], _paths[1], _paths[2], _paths[3]]
-    # pas[1].paths = [_paths[0], _paths[1], _paths[2], _paths[3], _paths[4]]
-    # pas[1].paths = [_paths[0], _paths[1], _paths[2], _paths[3]]
-    # pas[1].paths = [_paths[5], _paths[6], _paths[7]]
-    # data = pd.read_csv('Order.csv')
-    # num_data_row = data.shape[0]
-    # for i in range(0, num_data_row):
-    #     pas[0].order.append(data['A'][i])
-    #     pas[1].order.append(data['B'][i])
 
     # data_weight = pd.read_csv('Pas_weight.csv', index_col=0)
     data_weight = pd.read_excel('Data.xlsx', 'PasWeight', index_col=0)
@@ -87,9 +63,6 @@ def read_pas(_paths, default_para:ParaClass):
         pas[i].para.normalize_weight()
         for p in pas[i].paths:
             get_path_cost(p, pas[i].para)
-
-            # p.get_cost(pas[i].para)
-        # pas[i].update_path_cost()
         pas[i].update_oder()
 
     return pas

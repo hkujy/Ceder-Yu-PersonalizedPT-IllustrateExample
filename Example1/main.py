@@ -13,7 +13,6 @@ if __name__ == "__main__":
     paths = read_path()
     # check the read path set
 
-
     passengers = read_pas(paths, default_para)
     for o in passengers:
         print("*********start to compare Passengers {0} ************".format(o.id))
@@ -21,8 +20,8 @@ if __name__ == "__main__":
         o.shortest_non_weight = rankpath.sort_path(o.paths, 'NonWeight')
         # use absolute jnd_value
         o.ordered_path = rankpath.compare_oder(o.paths, o.order, o.jnd_abs, o.jnd)
-    # print suggested path
 
+    # print suggested path
     MyOutPut.pas(passengers)
     MyOutPut.recommend_path(passengers)
     MyOutPut.check_para(passengers)
