@@ -61,6 +61,7 @@ def read_pas(_paths, default_para:ParaClass):
                               'Transfer': _w_transfer,
                               'Walk': _w_walk}
         pas[i].para.normalize_weight()
+
         for p in pas[i].paths:
             get_path_cost(p, pas[i].para)
         pas[i].update_oder()
@@ -94,11 +95,10 @@ def read_path():
 def read_para():
     """
         function to read para class data
+    :return:
     """
-
-    # data = pd.read_csv('Para.csv', header=None, index_col=0)
+    # read data from excel
     data = pd.read_excel('Data.xlsx', 'Para')
-
     # _vot = data[1]['ValueOfTravel']
     _vot = data['Value'][0]
     _vowait = data['Value'][1]

@@ -5,32 +5,43 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 MyOutPut	.\main.py	/^import MyOutPut$/;"	i
+OutPutClass	.\MyClass.py	/^class OutPutClass:$/;"	c
 ParaClass	.\MyClass.py	/^class ParaClass:$/;"	c
-ParaClass	.\MyOutPut.py	/^from MyClass import ParaClass$/;"	i
 ParaClass	.\Read.py	/^from MyClass import PathClass, PasClass, ParaClass$/;"	i
+ParaClass	.\TestOnePara.py	/^from MyClass import PathClass, PasClass, ParaClass$/;"	i
 PasClass	.\MyClass.py	/^class PasClass:$/;"	c
 PasClass	.\MyOutPut.py	/^from MyClass import PasClass$/;"	i
 PasClass	.\Read.py	/^from MyClass import PathClass, PasClass, ParaClass$/;"	i
+PasClass	.\Revision.py	/^from MyClass import PasClass$/;"	i
+PasClass	.\TestOnePara.py	/^from MyClass import PathClass, PasClass, ParaClass$/;"	i
 PathClass	.\MyClass.py	/^class PathClass:$/;"	c
-PathClass	.\MyOutPut.py	/^from MyClass import PathClass$/;"	i
 PathClass	.\Read.py	/^from MyClass import PathClass, PasClass, ParaClass$/;"	i
+PathClass	.\TestOnePara.py	/^from MyClass import PathClass, PasClass, ParaClass$/;"	i
 __init__	.\MyClass.py	/^    def __init__(self):$/;"	m	class:ParaClass
 __init__	.\MyClass.py	/^    def __init__(self, _id):$/;"	m	class:PasClass
+__init__	.\MyClass.py	/^    def __init__(self, _id, _paths):$/;"	m	class:PasClass
 __init__	.\MyClass.py	/^    def __init__(self, _id, _travel, _fare, _wait, _transfer, _walk):$/;"	m	class:PathClass
+__init__	.\MyClass.py	/^    def __init__(self, _option_para = ParaClass()):$/;"	m	class:OutPutClass
 check_para	.\MyOutPut.py	/^def check_para(passengers:PasClass):$/;"	f
-compare_oder	.\rankpath.py	/^def compare_oder(_paths, _order, _jnd_abs, _jnd_percentage):$/;"	f
 default_para	.\main.py	/^    default_para = read_para()$/;"	v
+gen_random_weight	.\MyClass.py	/^    def gen_random_weight(cls):$/;"	m	class:ParaClass
+gen_random_weigtht	.\MyClass.py	/^    def gen_random_weigtht(cls):$/;"	m	class:PasClass
 get_candidate_path	.\rankpath.py	/^def get_candidate_path(_paths, _jnd):$/;"	f
 get_cost	.\MyClass.py	/^    def get_cost(self, _para: ParaClass):$/;"	m	class:PathClass
 get_path_cost	.\Read.py	/^def get_path_cost(p, _para: ParaClass):$/;"	f
+get_path_cost	.\TestOnePara.py	/^from Read import get_path_cost$/;"	i
+lex_oder	.\rankpath.py	/^def lex_oder(_paths, _order, _jnd_abs, _jnd_percentage):$/;"	f
 lex_order	.\rankpath.py	/^def lex_order(_paths, _order, _jnd):$/;"	f
-normalize_weight	.\MyClass.py	/^    def normalize_weight(self):$/;"	m	class:ParaClass
-np	.\MyOutPut.py	/^import numpy as np$/;"	i
-numpy	.\Read.py	/^import numpy$/;"	i
-pas	.\MyOutPut.py	/^def pas(pas: PasClass):$/;"	f
-passengers	.\main.py	/^    passengers = read_pas(paths, default_para)$/;"	v
+main	.\TestOnePara.py	/^def main(pas:PasClass):$/;"	f
+normalize_weight	.\MyClass.py	/^    def normalize_weight(cls):$/;"	m	class:ParaClass
+order_routes	.\MyClass.py	/^    def order_routes(self):$/;"	m	class:PasClass
+pas	.\MyOutPut.py	/^def pas(passenger: PasClass):$/;"	f
 paths	.\main.py	/^    paths = read_path()$/;"	v
+pd	.\MyClass.py	/^import pandas as pd$/;"	i
 pd	.\Read.py	/^import pandas as pd$/;"	i
+pd	.\TestOnePara.py	/^import pandas as pd$/;"	i
+random	.\MyClass.py	/^import random$/;"	i
+rankpath	.\MyClass.py	/^import rankpath$/;"	i
 rankpath	.\main.py	/^import rankpath$/;"	i
 read_para	.\Read.py	/^def read_para():$/;"	f
 read_para	.\main.py	/^from Read import read_para, read_path, read_pas$/;"	i
@@ -39,6 +50,9 @@ read_pas	.\main.py	/^from Read import read_para, read_path, read_pas$/;"	i
 read_path	.\Read.py	/^def read_path():$/;"	f
 read_path	.\main.py	/^from Read import read_para, read_path, read_pas$/;"	i
 recommend_path	.\MyOutPut.py	/^def recommend_path(passengers: PasClass):$/;"	f
+revision_main	.\Revision.py	/^def revision_main(_paths, _para):$/;"	f
 sort_path	.\rankpath.py	/^def sort_path(_paths, sort_type: str):$/;"	f
+test	.\Revision.py	/^import  TestOnePara as test$/;"	i
+two_pas_case	.\main.py	/^def two_pas_case(paths, default_para):$/;"	f
 update_oder	.\MyClass.py	/^    def update_oder(self):$/;"	m	class:PasClass
 update_path_cost	.\MyClass.py	/^    def update_path_cost(self):$/;"	m	class:PasClass

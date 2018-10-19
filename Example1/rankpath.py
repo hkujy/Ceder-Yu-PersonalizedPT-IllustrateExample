@@ -26,7 +26,7 @@ def get_candidate_path(_paths, _jnd):
     min_vector = {'Travel': 100000, 'Fare': 100000, 'Wait': 10000, 'Transfer': 10000, 'Walk':10000}
     for key in min_vector:
         min_vector[key] = min(_paths, key=lambda _paths: _paths.att[key])
-    with open("check_min.csv","wt") as f:
+    with open(".\OutPut\check_min.csv","wt") as f:
         print("Key,MinVal", file=f)
         for key in min_vector:
             print("{0},{1}".format(key, min_vector[key].att[key]), file=f)
@@ -106,7 +106,7 @@ def lex_order(_paths, _order, _jnd):
     pass
 
 
-def compare_oder(_paths, _order, _jnd_abs, _jnd_percentage):
+def lex_oder(_paths, _order, _jnd_abs, _jnd_percentage):
     """
         find path order based on the proposed method
     :param _paths:

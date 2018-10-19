@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="071c85a6-ae08-4a73-9e8f-91e06bf079f9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Revision.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestOnePara.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendPath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendPath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_min.csv" beforeDir="false" afterPath="$PROJECT_DIR$/check_min.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_pas_path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result_pas_path.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstVersionData/Jnd_abs.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstVersionData/Jnd_percentage.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstVersionData/Para.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstVersionData/Pas_weight.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstVersionData/PathCost.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOutPut.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyOutPut.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Read.py" beforeDir="false" afterPath="$PROJECT_DIR$/Read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendPath.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_para.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_path.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rankpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/rankpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_pas_path.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_paths.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags" beforeDir="false" afterPath="$PROJECT_DIR$/tags" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,15 +32,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Example1$main.coverage" NAME="main Coverage Results" MODIFIED="1526289960029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Example1$main.coverage" NAME="main Coverage Results" MODIFIED="1539941779813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="174">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding>
+                <element signature="e#84#99#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Revision.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Revision.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="44" />
+              <folding>
+                <element signature="e#106#134#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,26 +63,8 @@
       <file leaf-file-name="MyOutPut.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyOutPut.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1885">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="check_min.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/check_min.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyClass.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+            <state relative-caret-position="435">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -65,13 +78,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MyClass.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-299">
+              <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/2090020908/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-109">
+              <caret line="517" column="4" selection-start-line="517" selection-start-column="4" selection-end-line="517" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestOnePara.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestOnePara.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#184#203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Read.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Read.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2523">
-              <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+            <state relative-caret-position="136">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
+                <element signature="e#3079#3595#0" />
+                <element signature="e#3619#4478#0" />
               </folding>
             </state>
           </provider>
@@ -80,40 +125,36 @@
       <file leaf-file-name="rankpath.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rankpath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="899">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            <state relative-caret-position="203">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecommendPath.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RecommendPath.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="14" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result_pas_path.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result_pas_path.csv">
+      <file leaf-file-name="Torevision.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Torevision.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result_paths.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result_paths.csv">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>check_path</find>
+      <find>random</find>
+      <find>check_min</find>
+      <find>update_oder</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,12 +167,15 @@
         <option value="$PROJECT_DIR$/PathCost.csv" />
         <option value="$PROJECT_DIR$/Jnd_abs.csv" />
         <option value="$PROJECT_DIR$/PythonReadExcel.py" />
+        <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/ToDoList.txt" />
         <option value="$PROJECT_DIR$/Read.py" />
+        <option value="$PROJECT_DIR$/MyOutPut.py" />
+        <option value="$PROJECT_DIR$/rankpath.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/MyClass.py" />
-        <option value="$PROJECT_DIR$/rankpath.py" />
-        <option value="$PROJECT_DIR$/MyOutPut.py" />
-        <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/TestOnePara.py" />
+        <option value="$PROJECT_DIR$/Revision.py" />
       </list>
     </option>
   </component>
@@ -142,17 +186,16 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="109" />
-    <option name="y" value="144" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,10 +207,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -221,30 +266,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="337" height="678" id="Documentation" order="5" sideWeight="0.5090909" side_tool="true" visible="true" weight="0.051705755" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="5" sideWeight="0.51173186" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09434968" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.096481875" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.4909091" visible="true" weight="0.051705755" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.48826817" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.257754" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4603352" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,21 +302,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/rankpath.py</url>
-          <line>73</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Read.py</url>
           <line>31</line>
           <option name="timeStamp" value="4" />
@@ -281,63 +311,21 @@
           <line>62</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Revision.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Revision.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="19" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/check_min.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2523">
-          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <element signature="e#1#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rankpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendPath.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result_pas_path.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="82" selection-start-line="1" selection-start-column="82" selection-end-line="1" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -358,6 +346,8 @@
           <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#3079#3595#0" />
+            <element signature="e#3619#4478#0" />
           </folding>
         </state>
       </provider>
@@ -376,13 +366,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result_pas_path.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result_pas_path.csv" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
@@ -403,6 +387,8 @@
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#3079#3595#0" />
+            <element signature="e#3619#4478#0" />
           </folding>
         </state>
       </provider>
@@ -414,13 +400,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result_pas_path.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result_pas_path.csv" />
     <entry file="file://$PROJECT_DIR$/RecommendPath.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -448,6 +428,8 @@
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#3079#3595#0" />
+            <element signature="e#3619#4478#0" />
           </folding>
         </state>
       </provider>
@@ -459,13 +441,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result_pas_path.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result_pas_path.csv" />
     <entry file="file://$PROJECT_DIR$/RecommendPath.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -513,53 +489,29 @@
     <entry file="file://$PROJECT_DIR$/Jnd_abs.csv" />
     <entry file="file://$PROJECT_DIR$/Jnd_percentage.csv" />
     <entry file="file://$PROJECT_DIR$/PythonReadExcel.py" />
-    <entry file="file://$PROJECT_DIR$/Read.py">
+    <entry file="file://$PROJECT_DIR$/check_min.csv" />
+    <entry file="file://$PROJECT_DIR$/result_pas_path.csv" />
+    <entry file="file://$USER_HOME$/OneDrive - Danmarks Tekniske Universitet/IPTOP/Research/Design/Results/Example_1 - Try Effect of Path Set/Script.py" />
+    <entry file="file://$PROJECT_DIR$/../../IPTOP/IOPT/PyScript/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2523">
-          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <element signature="e#1#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2842">
+          <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rankpath.py">
+    <entry file="file://$USER_HOME$/OneDrive - Danmarks Tekniske Universitet/Students/Phd/YeJiao/Trial/try.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        <state relative-caret-position="522">
+          <caret line="136" column="30" selection-start-line="136" selection-start-column="30" selection-end-line="136" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/check_min.csv">
+    <entry file="file://$PROJECT_DIR$/ToDoList.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="29">
+          <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOutPut.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1885">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result_paths.csv">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -568,17 +520,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result_pas_path.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecommendPath.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="14" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Torevision.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyOutPut.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/2090020908/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="517" column="4" selection-start-line="517" selection-start-column="4" selection-end-line="517" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#84#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#3079#3595#0" />
+            <element signature="e#3619#4478#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rankpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestOnePara.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#184#203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-299">
+          <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Revision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#106#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

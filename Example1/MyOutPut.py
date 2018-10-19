@@ -2,12 +2,11 @@ from MyClass import PasClass
 
 
 def pas(passenger: PasClass):
-
     """
         print the two passengers
     :return:
     """
-    outfile = "result_pas_path.csv"
+    outfile = ".\output\\result_pas_path.csv"
     with open(outfile, "wt") as f:
         print("Pas,Path,Fare,Travel,Wait,W_Fare,W_Travel,W_Wait,WeightedCost,NonWeightCost",  file=f)
         for o in passenger:
@@ -19,7 +18,7 @@ def pas(passenger: PasClass):
 
 
 def recommend_path(passengers: PasClass):
-    with open("RecommendPath.txt", "wt") as f:
+    with open(".\OutPut\RecommendPath.txt", "wt") as f:
         for o in passengers:
             num = 1
             max_num = len(o.paths)
@@ -58,7 +57,7 @@ def recommend_path(passengers: PasClass):
 
 def check_para(passengers:PasClass):
 
-    with open("check_para.csv", "wt") as f:
+    with open(".\OutPut\check_para.csv", "wt") as f:
         print("Weight,A,B", file=f)
         keys = passengers[0].para.weight.keys()
         for r in keys:
