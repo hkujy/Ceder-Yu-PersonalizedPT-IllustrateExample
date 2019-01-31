@@ -203,6 +203,53 @@ class PasClass:
                 else:
                     print('{0})'.format(p[0].id))
                 num += 1
+
+
+    def print_path_file(self, print_case ="all"):
+        """
+
+            print the passengers' path on scree
+        :return:
+        """
+        # print shortest path
+        with open(".\OutPut\PathComb.txt", "a") as f:
+            if print_case == "all" or print_case == "shortest":
+                num = 1
+                max_num = len(self.paths)
+                print("Pas={0},shortest_non_weight=(".format(self.id), end=',', file=f)
+                for p in self.shortest_non_weight:
+                    if num < max_num:
+                        print('{0},'.format(p.id), end=',', file=f)
+                    else:
+                        print('{0})'.format(p.id),file=f)
+                    num += 1
+            # print weighted path
+            if print_case == "all" or print_case == "weighted":
+                num = 1
+                max_num = len(self.paths)
+                print("Pas={0},shortest_weight=(".format(self.id), end='', file=f)
+                for p in self.shortest_weight:
+                    if num > max_num:
+                        continue
+                    if num < max_num:
+                        print('{0},'.format(p.id), end='',file=f)
+                    else:
+                        print('{0})'.format(p.id), file=f)
+                    num += 1
+
+        # print ordered path
+            if print_case == "all" or print_case == "ordered":
+                num = 1
+                max_num = len([ps for ps in self.paths if ps.isCandy is True])
+                print("Pas={0},ordered_path=(".format(self.id), end='', file=f)
+                for p in self.ordered_path:
+                    if num > max_num:
+                        continue
+                    if num < max_num:
+                        print('{0},'.format(p[0].id),end='', file=f)
+                    else:
+                        print('{0})'.format(p[0].id),file=f)
+                    num += 1
     pass
 
 class OutPutClass:
