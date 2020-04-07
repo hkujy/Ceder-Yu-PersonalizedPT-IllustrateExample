@@ -1,7 +1,7 @@
 #Readme 
 1. Run the code
-> python main.py 
-> you may need to change the name of file "Read.py" to "read.py"
+* python main.py 
+* you may need to change the name of file "Read.py" to "read.py"
 2. Results 
 > You should be able to get the same results as Table 1 in the reference 
 3. Contact 
