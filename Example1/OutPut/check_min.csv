@@ -1,6 +1,5 @@
+This file checks the minimum value of each attributes
 Key,MinVal
 Travel,70
 Fare,8
-Wait,0
-Transfer,0
-Walk,-4
+Comfort,-4

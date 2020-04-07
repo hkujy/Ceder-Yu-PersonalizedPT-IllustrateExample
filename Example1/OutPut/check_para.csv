@@ -1,6 +1,4 @@
 Weight,A,B
 Fare,0.6,0.1
 Travel,0.3,0.6
-Wait,0.0,0.0
-Transfer,0.0,0.0
-Walk,0.1,0.3
+Comfort,0.1,0.3
