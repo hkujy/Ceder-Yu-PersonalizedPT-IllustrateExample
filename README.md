@@ -1,9 +1,10 @@
 #Readme 
 1. Run the code
 * python main.py 
-* you may need to change the name of file "Read.py" to "read.py"
 2. Results 
-> You should be able to get the same results as Table 1 in the reference 
+> You should be able to get the same results as Table 1,rows 1,3,4 in the reference. 
+> The second row "Shortest path based on the most important attribute" can be easily observed. So I did not code it. 
+
 3. Contact 
 > yujiang@dtu.dk
 
